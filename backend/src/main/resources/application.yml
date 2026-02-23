@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/jt808
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+  jackson:
+    time-zone: UTC
+
+logging:
+  level:
+    root: INFO
+    com.example.jt808: DEBUG
+
+jt808:
+  netty:
+    port: 7611
+
+mqtt:
+  enabled: false
+  broker: tcp://localhost:1883
