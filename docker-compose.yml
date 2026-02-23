@@ -1,0 +1,21 @@
+version: '3.9'
+services:
+  postgres18:
+    image: postgres:18
+    container_name: jt808-postgres18
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: jt808
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg18_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d jt808"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  pg18_data:
