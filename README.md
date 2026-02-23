@@ -1,4 +1,4 @@
-# JT808 / JT1078 / GB32960 车联网平台（示例实现）
+# JT808 / JT1078 / GB32960 车联网平台
 
 ## 项目结构
 - `backend`：Spring Boot + Netty + Disruptor + PostgreSQL + MQTT + SSE
